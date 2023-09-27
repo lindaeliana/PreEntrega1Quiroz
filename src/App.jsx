@@ -4,7 +4,7 @@ import './index.scss'
 
 function App() {
   
-  const greetingM = "¡Bienvenido a nuestro kiosco en línea!";
+  const greetingM = "¡Bienvenido/a a nuestra Página!";
 
   return (
     <>

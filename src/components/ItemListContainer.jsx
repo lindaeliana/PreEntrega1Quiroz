@@ -2,7 +2,7 @@ import React from "react";
 
 function ItemListContainer({greeting}) {
     return(
-        <div><span>Mensaje del Programador 💻</span>
+        <div><span>Mensaje</span>
         <p>{greeting}</p>
         </div>               
     )

@@ -22,16 +22,20 @@ body{
     border-radius: 10%;
 }
 
-.nav1 {
+.nav {
     flex-direction: column;
+    width: 110rem;
     opacity: 90%;
     background-color: #AD7315;
-    text-align: center;
-    margin-top: 3%;
+    text-align: end;
+    padding: 2%;
+}
+
+.nav1{
+    justify-content: space-between;
 }
 
 .carri a:hover{
-justify-content: end;
 opacity: 50%;
 background-color:white;
 }

@@ -3,23 +3,16 @@ import CartWidget from "./Cartwidget";
 function NavBar() {
   return (
     <ul>
-      <div>
+      <div className="nav">
         <nav>
           <div className="nav1"> 
-            <a href="#">Kiosco Express ✨</a>
+            <main href="#">Infinity Denim</main>
             <ul >
-              <li><a href="#">Productos</a></li>
-              <li><a href="#">Contacto</a></li>
-              <li><a href="#">Ubicación</a></li>
+              <li><a class="nav-link fs-5 text-light" href="#">Productos</a></li>
+              <li><a class="nav-link fs-5 text-light" href="#">Contacto</a></li>
+              <li><a class="nav-link fs-5 text-light" href="#">Ubicación</a></li>
               <li className="carri"><CartWidget/></li>
             </ul>
-            <div className="nav1">
-              <ul>
-                <li><a href="#">Contacto</a></li>
-                <li><a href="#">Ubicación</a></li>
-                <li className="carri"><CartWidget/></li>
-              </ul>
-            </div>
           </div>
         </nav>
       </div>
