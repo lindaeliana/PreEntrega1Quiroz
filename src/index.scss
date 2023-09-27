@@ -1,0 +1,37 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+    border: 0;
+}
+
+
+body{
+    background-color: rgba(40, 50, 120, 0.5);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-style: oblique;
+    display: flex;
+}
+
+.nav1 a:hover {
+    background-color: #E6BE0E;
+    border-radius: 10%;
+}
+
+.nav1 {
+    flex-direction: column;
+    opacity: 90%;
+    background-color: #AD7315;
+    text-align: center;
+    margin-top: 3%;
+}
+
+.carri a:hover{
+justify-content: end;
+opacity: 50%;
+background-color:white;
+}
