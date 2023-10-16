@@ -1,17 +1,33 @@
 import NavBar from './components/Navbar'
-import ItemListContainer from './components/ItemListContainer'
+import ItemListContainer from './Components/ItemListContanier'
 import './index.scss'
+import Catalog from './Components/Category'
+import Detail from './Components/ItemDetailContainer'
+import React from 'react';
+import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
+
 
 function App() {
-  
-  const greetingM = "¡Bienvenido/a a nuestra Página!";
-
   return (
-    <>
-      <NavBar/>
-      <ItemListContainer greeting={greetingM} />
-    </>
-  )
+    <Router>
+      <div>
+        <h1>Aplicación de Catálogo</h1>
+        <nav>
+          <ul>
+            <li>
+              <Link to="/catalog">Catálogo</Link>
+            </li>
+          </ul>
+        </nav>
+        <hr />
+        <Switch>
+          <Route path="/catalog/:id" component={Detail} />
+          <Route path="/category/:categoryId" component={ItemListContainer} />
+          <Route path="/catalog" component={Catalog} />
+        </Switch>
+      </div>
+    </Router>
+  );
 }
 
 export default App
