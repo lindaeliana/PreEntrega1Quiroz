@@ -8,4 +8,4 @@ function ItemListContainer({greeting}) {
     )
 }
 
-export default ItemListContainer
+export default ItemListContainer;

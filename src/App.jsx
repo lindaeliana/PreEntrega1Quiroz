@@ -4,29 +4,26 @@ import './index.scss'
 import Catalog from './Components/Category'
 import Detail from './Components/ItemDetailContainer'
 import React from 'react';
-import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Link, NavLink, BrowserRouter } from 'react-router-dom';
 
 
 function App() {
   return (
-    <Router>
+    <BrowserRouter>
       <div>
         <h1>Aplicación de Catálogo</h1>
         <nav>
-          <ul>
-            <li>
-              <Link to="/catalog">Catálogo</Link>
-            </li>
-          </ul>
+              <NavBar/>
+              <NavLink to="/catalog">Catálogo</NavLink>
+            
         </nav>
-        <hr />
-        <Switch>
-          <Route path="/catalog/:id" component={Detail} />
-          <Route path="/category/:categoryId" component={ItemListContainer} />
-          <Route path="/catalog" component={Catalog} />
-        </Switch>
+        <hr/>
+          <Link to="/catalog/:id" component={Detail} />
+          <Link to="/category/:categoryId" component={ItemListContainer} />
+          <Link to="/catalog" component={Catalog} />
+        
       </div>
-    </Router>
+    </BrowserRouter>
   );
 }
 
