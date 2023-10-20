@@ -1,47 +1,26 @@
-import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import { getProducts } from "./getProducts";
+import ItemDetail from "./ItemDetail";
 
-function ItemDetailContainer() {
-  const { itemId } = useParams();
-  const [itemData, setItemData] = useState(null);
+const ItemDetailContainer = () => {
+    const [product, setProduct] = useState(null);
+    const { id } = useParams();
 
-  useEffect(() => {
-    const fetchData = () => {
-      return new Promise((resolve, reject) => {
-        setTimeout(() => {
-          const itemData = {
-            id: itemId,
-            name: 'Nombre del ítem',
-            description: 'Descripción del ítem',
-          };
-          resolve(itemData);
-        }, 1000);
-      });
-    };
+    const getProductById = (productId) => {
+        const allProducts = getProducts();
+        return allProducts.find(product => product.id === parseInt(productId));
+    }
+    useEffect(() => {
+        const item = getProductById(id);
+        setProduct(item);
+    }, [id]);
 
-    fetchData()
-      .then((data) => {
-        setItemData(data);
-      })
-      .catch((error) => {
-        console.error('Error al obtener los detalles del ítem', error);
-      });
-  }, [itemId]);
-
-  return (
-    <div>
-      <h2>Detalles del ítem {itemId}</h2>
-      {itemData ? (
-        <div>
-          <p>Nombre: {itemData.name}</p>
-          <p>Descripción: {itemData.description}</p>
-          {}
+    return (
+        <div className='row mb-3 container itemDetail'>
+            {product ? <ItemDetail item={product} /> : <h5>Producto no encontrado 🔎</h5>}
         </div>
-      ) : (
-        <p>Cargando...</p>
-      )}
-    </div>
-  );
-}
+    );
+};
 
 export default ItemDetailContainer;

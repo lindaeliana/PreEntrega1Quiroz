@@ -1,0 +1,65 @@
+[
+    {
+      "id": 1,
+      "name": "Atenea",
+      "category": "Jeans",
+      "price": 20000,
+      "stock": 6
+    },
+    {
+      "id": 2,
+      "name": "Afrodita",
+      "category": "Jeans",
+      "price": 18000,
+      "stock": 8
+    },
+    {
+      "id": 3,
+      "name": "Eco",
+      "category": "Jackets",
+      "price": 15000,
+      "stock": 10
+    },
+    {
+      "id": 4,
+      "name": "Hera",
+      "category": "Jackets",
+      "price": 12000,
+      "stock": 12
+    },
+    {
+      "id": 5,
+      "name": "Megara",
+      "category": "Jackets",
+      "price": 8000,
+      "stock": 15
+    },
+    {
+      "id": 6,
+      "name": "Artemisa",
+      "category": "Jeans",
+      "price": 10000,
+      "stock": 18
+    },
+    {
+      "id": 7,
+      "name": "Demeter",
+      "category": "Jackets",
+      "price": 50000,
+      "stock": 20
+    },
+    {
+      "id": 8,
+      "name": "Persefone",
+      "category": "Jeans",
+      "price": 30000,
+      "stock": 25
+    },
+    {
+      "id": 9,
+      "name": "Selene",
+      "category": "Jeans",
+      "price": 12000,
+      "stock": 8
+    }
+  ]
