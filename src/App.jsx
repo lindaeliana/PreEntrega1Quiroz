@@ -1,9 +1,9 @@
 import { BrowserRouter, Routes, Route} from 'react-router-dom';
 
-import NavBar from './Components/Navbar.jsx'
-import ItemListContainer from './Components/ItemListContanier'
+import NavBar from './Components/Navbar.jsx';
+import ItemListContainer from './Components/ItemListContanier';
 import ItemDetailContainer from './Components/ItemDetailContainer';
-import './App.css'
+import './App.css';
 
 function App() {
 
